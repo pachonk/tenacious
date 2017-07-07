@@ -1,6 +1,7 @@
 const flashDismiss = () => {
   const removeAlert = (e) => {
-    document.body.removeChild(e.target.parentNode);
+    const alert = e.target.parentNode;
+    alert.parentNode.removeChild(alert);
   };
   const dismissAlerts = document.getElementsByClassName('dismiss');
 
