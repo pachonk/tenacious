@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <%= render 'layouts/flash_messages' %>  
     <div class="container">
+      <%= render 'layouts/flash_messages' %> 
       <%= yield %>
     </div>
     <%= javascript_pack_tag 'application' %>
