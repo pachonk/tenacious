@@ -1,0 +1,23 @@
+<nav>
+  <div class='container'>
+    <div class='logo'>
+      <%= link_to 'Tenacious', root_path %>
+    </div>
+
+    <div id='nav-toggle'><span></span></div>
+
+    <!-- <div class='link-container'> -->
+    <!--  <%= link_to 'Nowhere', '#' %> -->
+    <!-- </div> -->
+
+    <div class='link-container'>
+      <% if user_signed_in? %>
+        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
+    </div>
+      
+  </div>
+</nav>
