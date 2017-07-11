@@ -1,23 +1,18 @@
 <nav>
-  <div class='container'>
-    <div class='logo'>
-      <%= link_to 'Tenacious', root_path %>
-    </div>
+  <%= link_to 'Tenacious', root_path, class: 'logo' %>
 
-    <div id='nav-toggle'><span></span></div>
+  <div id='nav-toggle'><span></span></div>
 
-    <!-- <div class='link-container'> -->
-    <!--  <%= link_to 'Nowhere', '#' %> -->
-    <!-- </div> -->
+  <!-- <ul class='link-container'> -->
+  <!--  <li><%= link_to 'Nowhere', '#' %></li> -->
+  <!-- </ul> -->
 
-    <div class='link-container'>
-      <% if user_signed_in? %>
-        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign Up', new_user_registration_path %>
-        <%= link_to 'Sign In', new_user_session_path %>
-      <% end %>
-    </div>
-      
-  </div>
+  <ul class='link-container'>
+    <% if user_signed_in? %>
+      <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+      <li><%= link_to 'Sign In', new_user_session_path %></li>
+    <% end %>
+  </ul>
 </nav>
