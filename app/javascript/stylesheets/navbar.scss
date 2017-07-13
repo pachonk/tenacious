@@ -25,7 +25,7 @@ nav {
     }
   }
 
-  input {
+  .link {
     background: none;
     border: none;
     font: inherit;
@@ -36,17 +36,21 @@ nav {
     text-decoration: none;
   }
 
-  div, ul, a {
+  label, ul, a {
     align-self: center;
   }
 
-  input, a {
+  .link, a {
     padding: $link-padding;
     color: #efefef;
   }
   
-  input:hover, a:hover {
+  .link:hover, a:hover {
     color: #568ff7
+  }
+
+  #trigger {
+    display: none;
   }
 }
 
@@ -75,33 +79,37 @@ nav {
     span:after {
       top: 10px;
     }
+  }
 
-    &.active span {
-      background-color: transparent;
+  #trigger:checked ~ label span {
+    background-color: transparent;
 
-      &:before, &:after {
+    &:before, &:after {
       top: 0;
-      }
+    }
 
-      &:before {
-        transform: rotate(45deg);
-      }
-      
-      &:after {
-        transform: rotate(-45deg);
-      }
+    &:before {
+      transform: rotate(45deg);
+    }
+    
+    &:after {
+      transform: rotate(-45deg);
     }
   }
 
+  #trigger:checked ~ ul {
+    display: block;
+  }
+
   nav {
-    ul, input {
+    ul, .link {
       width: 100%;
     }
 
     ul {
       display: none;
 
-      input, a {
+      .link, a {
         padding: 20px 0;
       }
 

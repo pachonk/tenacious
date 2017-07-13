@@ -1,7 +1,11 @@
 <nav>
   <%= link_to 'Tenacious', root_path, class: 'logo' %>
 
-  <div id='nav-toggle'><span></span></div>
+  <input id='trigger' type='checkbox'>
+
+  <label for='trigger' id='nav-toggle'>
+    <span></span>
+  </label>
 
   <!-- <ul class='link-container'> -->
   <!--  <li><%= link_to 'Nowhere', '#' %></li> -->
@@ -9,7 +13,7 @@
 
   <ul class='link-container'>
     <% if user_signed_in? %>
-      <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+      <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'link' %></li>
     <% else %>
       <li><%= link_to 'Sign Up', new_user_registration_path %></li>
       <li><%= link_to 'Sign In', new_user_session_path %></li>

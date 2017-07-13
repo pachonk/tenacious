@@ -8,7 +8,5 @@
 // layout file, like app/views/layouts/application.html.erb
 import '../application.scss';
 import flashDismiss from '../helpers/flashDismiss';
-import toggleNavbar from '../helpers/navbar';
 
 flashDismiss();
-toggleNavbar();
