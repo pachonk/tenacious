@@ -7,13 +7,13 @@
     <span></span>
   </label>
 
-  <!-- <ul class='link-container'> -->
+  <!-- <ul> -->
   <!--  <li><%= link_to 'Nowhere', '#' %></li> -->
   <!-- </ul> -->
 
-  <ul class='link-container'>
+  <ul>
     <% if user_signed_in? %>
-      <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'link' %></li>
+      <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
     <% else %>
       <li><%= link_to 'Sign Up', new_user_registration_path %></li>
       <li><%= link_to 'Sign In', new_user_session_path %></li>

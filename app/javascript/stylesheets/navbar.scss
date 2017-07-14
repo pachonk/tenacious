@@ -25,7 +25,7 @@ nav {
     }
   }
 
-  .link {
+  form input {
     background: none;
     border: none;
     font: inherit;
@@ -40,12 +40,12 @@ nav {
     align-self: center;
   }
 
-  .link, a {
+  form input, a {
     padding: $link-padding;
     color: #efefef;
   }
   
-  .link:hover, a:hover {
+  form input:hover, a:hover {
     color: #568ff7
   }
 
@@ -102,14 +102,14 @@ nav {
   }
 
   nav {
-    ul, .link {
+    ul, form input {
       width: 100%;
     }
 
     ul {
       display: none;
 
-      .link, a {
+      form input, a {
         padding: 20px 0;
       }
 
@@ -126,7 +126,7 @@ nav {
     display: none;
   }
   
-  .link-container {
+  nav > ul {
     display: block !important;
   }
 }
